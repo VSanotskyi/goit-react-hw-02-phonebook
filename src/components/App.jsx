@@ -48,7 +48,7 @@ class App extends Component {
 
   render() {
     return (
-      <>
+      <div style={{ padding: '20px' }}>
         <ContactsForm getContacts={this.getContacts} />
         <SearchContact getNameFomSearch={this.getNameFomSearch} />
         {
@@ -59,7 +59,7 @@ class App extends Component {
             />
           )
         }
-      </>
+      </div>
     );
   }
 }
