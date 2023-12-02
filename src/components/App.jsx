@@ -37,7 +37,8 @@ class App extends Component {
   getNameFomSearch = name => this.setState({ nameForSearch: name });
 
   searchContact = () => this.state.contacts.filter(
-    el => el.name.toLowerCase().includes(this.state.nameForSearch));
+    el => el.name.toLowerCase().includes(this.state.nameForSearch))
+    .sort((a, b) => a.name.localeCompare(b.name));
 
   deleteContact = (id) => {
     this.setState(prev => ({
