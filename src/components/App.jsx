@@ -25,7 +25,7 @@ class App extends Component {
 
     if (this.state.contacts.find(el => el.name === data.name) ||
       this.state.contacts.find(el => el.number === data.number)) {
-      alert('Error');
+      alert('The name or number already exists');
       return;
     }
 
