@@ -23,7 +23,8 @@ class App extends Component {
       id: nanoid(),
     };
 
-    if (this.state.contacts.find(el => el.name === data.name) ||
+    if (this.state.contacts.find(
+        el => el.name.toLowerCase() === data.name.toLowerCase()) ||
       this.state.contacts.find(el => el.number === data.number)) {
       alert('The name or number already exists');
       return;
